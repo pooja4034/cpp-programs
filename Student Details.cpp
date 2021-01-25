@@ -1,6 +1,6 @@
 #include<iostream>
 #include<stdio.h>
-namespace std;
+using namespace std;
 
 class student
 {
@@ -10,7 +10,7 @@ class student
 
     public:
            student();
-           -student();
+           ~student();
 
            void read();
            void display();
@@ -22,7 +22,7 @@ student::student()
     cout<<"\n Student::Constructor"<<endl;
 }
 
-student::-student()
+student::~student()
 {
     cout<<"\n Student::destructor"<<endl;
 }
@@ -36,7 +36,7 @@ void student::read()
     cin>>roll_no;
 }
 
-void student::dislpay()
+void student::display()
 {
     cout<<"\n Entered Student Details or Shown Below \n";
 
